@@ -1,0 +1,95 @@
+:root {
+  --slider-line-color: #fff;
+  --slider-thumb-color: #fff; /* White color for slider thumb */
+  --slider-thumb-border-color: #ccc; /* Light gray border color for slider thumb */
+  --slider-thumb-hover-color: #ff6b30; /* Highlight color for slider hover and drag state */
+  --slider-shadow-color: rgba(0, 0, 0, 0.3); /* Shadow color for slider thumb */
+  --slider-line-shadow-color: rgba(0, 0, 0, 0.75); /* Shadow color for slider line */
+}
+
+.image-comparison {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  clip-path: inset(0 50% 0 0);
+  z-index: 1;
+}
+
+.after {
+  position: relative;
+  z-index: 0;
+}
+
+.slider-line {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--slider-line-color);
+  z-index: 2;
+  transform: translateX(-1px);
+  box-shadow: 0 0 10px var(--slider-line-shadow-color);
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--slider-thumb-color);
+  border: 3px solid var(--slider-thumb-border-color);
+  box-shadow: 0 0 10px var(--slider-shadow-color);
+  transition: background-color 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb:active,
+.slider::-webkit-slider-thumb:hover {
+  background-color: var(--slider-thumb-hover-color);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--slider-thumb-color);
+  border: 3px solid var(--slider-thumb-border-color);
+  box-shadow: 0 0 10px var(--slider-shadow-color);
+  transition: background-color 0.3s ease;
+}
+
+.slider::-moz-range-thumb:active,
+.slider::-moz-range-thumb:hover {
+  background-color: var(--slider-thumb-hover-color);
+}
+
+.slider {
+  position: absolute;
+  left: -12px;
+  right: -12px;
+  top: 50%;
+  margin-top: -10px; /* Half the height of the slider thumb */
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 3; /* Ensure the slider thumb is on top */
+}
