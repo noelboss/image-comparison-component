@@ -2,6 +2,8 @@
 
 A lightweight, easy-to-integrate component for creating elegant before-and-after image comparisons. Designed with simplicity and ease of use in mind, this component is perfect for showcasing transformations, product comparisons, and more in a visually compelling way.
 
+You can [preview the component](https://image-comparison-component.vercel.app) here.
+
 ## Features
 
 - **Easy Integration**: Minimal setup required, making it straightforward to add to your existing website or project.
