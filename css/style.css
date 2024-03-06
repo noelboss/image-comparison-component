@@ -43,6 +43,7 @@
 .slider-line {
   position: absolute;
   top: 0;
+  left: 50%;
   height: 100%;
   width: 2px;
   background-color: var(--slider-line-color);
